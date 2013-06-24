@@ -1,12 +1,13 @@
-/* ArrayLikeInts.c*/
+/*-- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+ |	Filename:	ArrayLikeInts.h
+ +-- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+*/
 #include "ArrayLikeInts.h"
 
-/* Subroutine:	print_ali
- * @param:	array_like_int, the array that will be displayed like an integer.
- * 			ali_sig_fig, largest sigificant figure of the array, the index which will be first displayed.
- *
- * Starting from ali_sig_fig, every element from that down will be displayed to screen.
- */
+/*-- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+ |	Subroutine:	print_ali
+ +-- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+*/
 void print_ali(int* array_like_int, int ali_sig_fig){
 	int i;
 	
@@ -17,13 +18,10 @@ void print_ali(int* array_like_int, int ali_sig_fig){
 	fprintf(stdout,"\n");
 }
 
-/* Subroutine:	ArrayLikeInts
- * @param:	array, the array whos contents will be filled.
- *			array_len, the length of the passed array.
- *			value, the value that all elements in the array will be set to.
- *
- * Every element in an array is set to the given value.
- */
+/*-- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+ |	Subroutine:	fill_array
+ +-- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+*/
 void fill_array(int* array, int array_len, int value){
 	int i;
 	for(i=0;i<array_len;i++){
@@ -31,13 +29,10 @@ void fill_array(int* array, int array_len, int value){
 	}
 }
 
-/* Function:	array_sum
- * @param:	array, the array whos elements will be summed.
- *			array_len, the length of the passed in array.
- * @return:	the sum of all elements in the array.
- *
- * The sum is set to zero, then indexes 0-array_len of the array are added to the sum.
- */
+/*-- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+ |	Function:	array_sum
+ +-- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+*/
 int array_sum(int* array, int array_len){
 	int sum = 0;
 	int i;
@@ -47,16 +42,10 @@ int array_sum(int* array, int array_len){
 	return sum;
 }
 
-/* Subroutine: multiply_array_like_int
- * @param:	array_like_int, the array whos contents will be altered to hold the product of itself with a given value.
- *			ali_len, the length of the array passed in.
- *			ali_sig_fig, the value of the largest index who holds a value, can be changed.
- *			mult, the value that will be multiplied to every element.
- *
- * goes through every element, from largest to smallest index, multiplying the contents by the given value. If
- * the product is greater than ten, it continues to be carried over to the next index. Continues until there is no 
- * remainder left.
- */
+/*-- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+ |	Subroutine:	multiply_array_like_int
+ +-- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+*/
 void multiply_array_like_int(int* array_like_int, int ali_len, int* ali_sig_fig, int mult){
 	int product;
 	int i, j;

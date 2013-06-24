@@ -1,16 +1,24 @@
-/*ArrayLikeInt.c*/
+/*-- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+ |	Filename:	ProblemTwenty.c
+ +-- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+*/
 #include "ProblemTwenty.h"
 
-
-/* Function: set_factorial
- * @param:	nth, the size of the factorial to be calculated.
- * 			ali_len, the length of the array that will be set according to the size of the factorial.
- *			ali_sig_fig, the largest index that holds a value.
- * @return:	array_like_int, a pointer to an array whos contents hold the digits of the nth factorial.
- *
- * Creates an array of size n*n, then proceeds to multiply the contents, like an array, by values 1-n. 
- * Producing an array whos each index holds a significant digit of the nth factorial.
- */
+/*-- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+ |	Function:	set_factorial
+ +-- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+ |	Purpose:	Creates an array of size n*n, then proceeds to multiply the contents, like 
+ |				an array, by values 1-n. Producing an array whos each index holds a 
+ |				significant digit of the nth factorial.
+ +-- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+ |	@param:	nth, the size of the factorial to be calculated.
+ | 			ali_len, 		the length of the array that will be set according to the size 
+ |							of the factorial.
+ |			ali_sig_fig, 	the largest index that holds a value.
+ | @return:	array_like_int, a pointer to an array whos contents hold the digits of the nth 
+ |							factorial.
+ +-- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+*/
 int* set_factorial(int nth, int* ali_len, int* ali_sig_fig){
 	int* array_like_int;
 	int i;
@@ -25,10 +33,15 @@ int* set_factorial(int nth, int* ali_len, int* ali_sig_fig){
 	return array_like_int;
 }
 
-/* This Program will prompt the user to enter a number. If zero or non-digit number is entered, it will begin to exit. Otherwise
- * it will calculate and store the nth factoral in an array, with each index holding a significant digit. It will take the sum 
- * of those digits and display.
- */
+/*-- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+ |	Function:	main
+ +-- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+ |	Purpose:	This Program will prompt the user to enter a number. If zero or non-digit 
+ |				number is entered, it will begin to exit. Otherwise it will calculate and 
+ |				store the nth factoral in an array, with each index holding a significant 
+ |				digit. It will take the sum of those digits and display.
+ +-- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+*/
 int main(){
 	int* array_like_int, ali_len, ali_sig_fig, sum, nth;
 	char* inputted;
